@@ -1,0 +1,1178 @@
+/* =========================================================
+   DEVORA DIGITAL
+   ABOUT PAGE
+========================================================= */
+
+
+/* =========================================================
+   01. ABOUT HERO
+========================================================= */
+
+.about-hero {
+
+    position: relative;
+
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        calc(var(--header-height) + 100px)
+        0
+        100px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(168, 85, 247, 0.12),
+            transparent 45%
+        );
+
+}
+
+
+.about-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.about-hero h1 {
+
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(48px, 7vw, 82px);
+
+    line-height: 1;
+
+    letter-spacing:
+        -4px;
+
+}
+
+
+.about-hero h1 span {
+
+    display: block;
+
+    color:
+        var(--purple-400);
+
+}
+
+
+.about-hero p {
+
+    max-width: 650px;
+
+    margin:
+        0 auto 35px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+.about-hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.about-grid-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.25;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        70px 70px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+
+}
+
+
+.about-glow {
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    filter:
+        blur(100px);
+
+    pointer-events: none;
+
+}
+
+
+.about-glow-one {
+
+    top: -180px;
+
+    left: 10%;
+
+    background:
+        rgba(168, 85, 247, 0.12);
+
+}
+
+
+.about-glow-two {
+
+    right: -150px;
+
+    bottom: -150px;
+
+    background:
+        rgba(124, 58, 237, 0.10);
+
+}
+
+
+/* =========================================================
+   02. STORY
+========================================================= */
+
+.story-section {
+
+    padding:
+        120px 0;
+
+    background:
+        var(--dark-900);
+
+}
+
+
+.story-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 90px;
+
+}
+
+
+.story-content {
+
+    max-width: 600px;
+
+}
+
+
+.story-content h2 {
+
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(36px, 5vw, 58px);
+
+    line-height: 1.08;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+.story-content h2 span {
+
+    display: block;
+
+    color:
+        var(--purple-400);
+
+}
+
+
+.story-content p {
+
+    margin-bottom: 18px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+
+.story-content strong {
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   ABOUT CARD
+========================================================= */
+
+.story-visual {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.about-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 480px;
+
+    padding: 35px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius:
+        var(--radius-xl);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(168,85,247,0.14),
+            rgba(255,255,255,0.025)
+        );
+
+    box-shadow:
+        var(--shadow-purple);
+
+    transition:
+        transform var(--transition-slow),
+        border-color var(--transition);
+
+}
+
+
+.about-card:hover {
+
+    transform:
+        translateY(-8px)
+        rotateX(2deg)
+        rotateY(-2deg);
+
+    border-color:
+        rgba(168,85,247,0.5);
+
+}
+
+
+.about-card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color:
+        var(--text-muted);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.about-card-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius:
+        13px;
+
+    background:
+        var(--gradient-purple);
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+}
+
+
+.about-card-content {
+
+    padding:
+        80px 0 55px;
+
+}
+
+
+.about-card-content > span {
+
+    color:
+        var(--purple-400);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.about-card-content h3 {
+
+    margin-top: 12px;
+
+    max-width: 350px;
+
+    font-size: 40px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.about-card-line {
+
+    height: 1px;
+
+    margin-bottom: 25px;
+
+    background:
+        var(--border-dark);
+
+}
+
+
+.about-card-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.about-card-stats div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.about-card-stats strong {
+
+    color:
+        var(--purple-400);
+
+    font-size: 22px;
+
+}
+
+
+.about-card-stats small {
+
+    color:
+        var(--text-muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   03. MISSION
+========================================================= */
+
+.mission-section {
+
+    padding:
+        120px 0;
+
+}
+
+
+.mission-box {
+
+    position: relative;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding:
+        80px 60px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius:
+        var(--radius-xl);
+
+    background:
+        var(--gradient-purple-soft);
+
+}
+
+
+.mission-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin:
+        0 auto 25px;
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(168,85,247,0.15);
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    color:
+        var(--purple-400);
+
+    font-size: 22px;
+
+}
+
+
+.mission-box .section-label {
+
+    margin-bottom: 15px;
+
+}
+
+
+.mission-box h2 {
+
+    max-width: 700px;
+
+    margin:
+        0 auto 20px;
+
+    font-size:
+        clamp(34px, 5vw, 55px);
+
+    line-height: 1.08;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+.mission-box h2 span {
+
+    color:
+        var(--purple-400);
+
+}
+
+
+.mission-box p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color:
+        var(--text-secondary);
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   04. VALUES
+========================================================= */
+
+.values-section {
+
+    padding:
+        120px 0;
+
+    background:
+        var(--dark-900);
+
+}
+
+
+.values-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.value-box {
+
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        rgba(255,255,255,0.025);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+
+}
+
+
+.value-box:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--border-purple);
+
+    background:
+        rgba(168,85,247,0.06);
+
+}
+
+
+.value-number {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+
+    color:
+        rgba(255,255,255,0.12);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.value-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 55px;
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(168,85,247,0.12);
+
+    color:
+        var(--purple-400);
+
+    font-size: 20px;
+
+}
+
+
+.value-box h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 20px;
+
+}
+
+
+.value-box p {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   05. WHY DEVORA
+========================================================= */
+
+.why-section {
+
+    padding:
+        120px 0;
+
+}
+
+
+.why-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        0.85fr 1.15fr;
+
+    gap: 100px;
+
+    align-items: start;
+
+}
+
+
+.why-heading {
+
+    position: sticky;
+
+    top: 120px;
+
+}
+
+
+.why-heading h2 {
+
+    margin-bottom: 20px;
+
+    font-size:
+        clamp(38px, 5vw, 58px);
+
+    line-height: 1.08;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+.why-heading h2 span {
+
+    display: block;
+
+    color:
+        var(--purple-400);
+
+}
+
+
+.why-heading p {
+
+    color:
+        var(--text-secondary);
+
+    line-height: 1.8;
+
+}
+
+
+.why-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+.why-item {
+
+    display: grid;
+
+    grid-template-columns:
+        48px 1fr;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        rgba(255,255,255,0.025);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+
+}
+
+
+.why-item:hover {
+
+    transform:
+        translateX(6px);
+
+    border-color:
+        var(--border-purple);
+
+    background:
+        rgba(168,85,247,0.05);
+
+}
+
+
+.why-check {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(168,85,247,0.12);
+
+    color:
+        var(--purple-400);
+
+    font-weight: 700;
+
+}
+
+
+.why-item h3 {
+
+    margin-bottom: 5px;
+
+    font-size: 17px;
+
+}
+
+
+.why-item p {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   06. CTA
+========================================================= */
+
+.about-cta {
+
+    padding:
+        0 0 120px;
+
+}
+
+
+.about-cta-box {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        90px 40px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius:
+        var(--radius-xl);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168,85,247,0.16),
+            rgba(124,58,237,0.04)
+        );
+
+}
+
+
+.about-cta-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.about-cta h2 {
+
+    margin-bottom: 18px;
+
+    font-size:
+        clamp(38px, 5vw, 62px);
+
+    line-height: 1.05;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+.about-cta h2 span {
+
+    color:
+        var(--purple-400);
+
+}
+
+
+.about-cta p {
+
+    max-width: 600px;
+
+    margin:
+        0 auto 30px;
+
+    color:
+        var(--text-secondary);
+
+    line-height: 1.8;
+
+}
+
+
+.cta-glow {
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    top: -180px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(168,85,247,0.16);
+
+    filter:
+        blur(90px);
+
+}
+
+
+/* =========================================================
+   07. RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .values-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .story-grid {
+
+        gap: 50px;
+
+    }
+
+
+    .why-grid {
+
+        gap: 50px;
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .story-grid,
+    .why-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .why-heading {
+
+        position: static;
+
+    }
+
+
+    .story-visual {
+
+        margin-top: 20px;
+
+    }
+
+
+    .about-hero {
+
+        min-height: 600px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-hero {
+
+        padding:
+            calc(var(--header-height) + 70px)
+            0
+            80px;
+
+    }
+
+
+    .about-hero h1 {
+
+        font-size: 45px;
+
+        letter-spacing:
+            -2.5px;
+
+    }
+
+
+    .about-hero p {
+
+        font-size: 15px;
+
+    }
+
+
+    .about-hero-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .about-hero-buttons .btn {
+
+        width: 100%;
+
+    }
+
+
+    .story-section,
+    .mission-section,
+    .values-section,
+    .why-section {
+
+        padding:
+            80px 0;
+
+    }
+
+
+    .about-card {
+
+        padding: 25px;
+
+    }
+
+
+    .about-card-content {
+
+        padding:
+            60px 0 40px;
+
+    }
+
+
+    .about-card-content h3 {
+
+        font-size: 32px;
+
+    }
+
+
+    .mission-box {
+
+        padding:
+            60px 25px;
+
+    }
+
+
+    .values-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .value-box {
+
+        min-height: auto;
+
+    }
+
+
+    .about-cta {
+
+        padding-bottom: 80px;
+
+    }
+
+
+    .about-cta-box {
+
+        padding:
+            70px 25px;
+
+    }
+
+}

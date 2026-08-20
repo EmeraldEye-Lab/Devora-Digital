@@ -1,0 +1,845 @@
+/* =========================================================
+   DEVORA DIGITAL
+   TERMS & CONDITIONS
+========================================================= */
+
+
+/* =========================================================
+   01. HERO
+========================================================= */
+
+.terms-hero {
+
+    position: relative;
+
+    min-height: 480px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        calc(var(--header-height) + 80px)
+        0
+        80px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(168, 85, 247, 0.16),
+            transparent 35%
+        ),
+        var(--dark-950);
+
+}
+
+
+.terms-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        60px 60px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+
+    pointer-events: none;
+
+}
+
+
+.terms-hero-glow {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    top: -200px;
+
+    right: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(168,85,247,0.12);
+
+    filter:
+        blur(80px);
+
+    pointer-events: none;
+
+}
+
+
+.terms-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+}
+
+
+.terms-hero h1 {
+
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(48px, 7vw, 82px);
+
+    line-height: 1;
+
+    letter-spacing:
+        -3px;
+
+}
+
+
+.terms-hero h1 span {
+
+    color:
+        var(--purple-400);
+
+}
+
+
+.terms-hero-content > p {
+
+    max-width: 650px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+.terms-updated {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    padding:
+        10px 16px;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-full);
+
+    background:
+        rgba(255,255,255,0.035);
+
+}
+
+
+.terms-updated span {
+
+    color:
+        var(--text-muted);
+
+    font-size: 12px;
+
+}
+
+
+.terms-updated strong {
+
+    color:
+        var(--purple-300);
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================================================
+   02. MAIN SECTION
+========================================================= */
+
+.terms-section {
+
+    padding:
+        100px 0 120px;
+
+    background:
+        var(--dark-950);
+
+}
+
+
+.terms-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        240px 1fr;
+
+    gap: 80px;
+
+    align-items: start;
+
+}
+
+
+
+/* =========================================================
+   03. SIDEBAR
+========================================================= */
+
+.terms-sidebar {
+
+    position: sticky;
+
+    top:
+        calc(var(--header-height) + 30px);
+
+}
+
+
+.terms-nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        rgba(255,255,255,0.025);
+
+}
+
+
+.terms-nav > span {
+
+    margin-bottom: 14px;
+
+    color:
+        var(--purple-400);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        1.8px;
+
+}
+
+
+.terms-nav a {
+
+    padding:
+        8px 0;
+
+    color:
+        var(--text-muted);
+
+    font-size: 12px;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+
+}
+
+
+.terms-nav a:hover {
+
+    color:
+        white;
+
+    transform:
+        translateX(3px);
+
+}
+
+
+
+/* =========================================================
+   04. CONTENT
+========================================================= */
+
+.terms-content {
+
+    max-width:
+        780px;
+
+}
+
+
+.terms-block {
+
+    padding:
+        0 0 55px;
+
+    margin-bottom:
+        55px;
+
+    border-bottom:
+        1px solid
+        var(--border-dark);
+
+}
+
+
+.terms-number {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--purple-400);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+.terms-block h2 {
+
+    margin-bottom: 20px;
+
+    color:
+        white;
+
+    font-size:
+        clamp(26px, 4vw, 36px);
+
+    line-height: 1.15;
+
+    letter-spacing:
+        -1px;
+
+}
+
+
+.terms-block p {
+
+    margin-bottom: 18px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+
+.terms-block p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+
+/* =========================================================
+   05. LIST
+========================================================= */
+
+.terms-block ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin:
+        20px 0 22px;
+
+    padding-left:
+        20px;
+
+}
+
+
+.terms-block li {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+.terms-block li::marker {
+
+    color:
+        var(--purple-400);
+
+}
+
+
+
+/* =========================================================
+   06. NOTE
+========================================================= */
+
+.terms-note {
+
+    margin-top:
+        25px;
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168,85,247,0.09),
+            rgba(168,85,247,0.025)
+        );
+
+}
+
+
+.terms-note strong {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color:
+        var(--purple-300);
+
+    font-size: 13px;
+
+}
+
+
+.terms-note p {
+
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+
+}
+
+
+
+/* =========================================================
+   07. CONTACT CARD
+========================================================= */
+
+.terms-contact-block {
+
+    padding-bottom:
+        35px;
+
+}
+
+
+.terms-contact-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top:
+        28px;
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168,85,247,0.10),
+            rgba(168,85,247,0.025)
+        );
+
+}
+
+
+.contact-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius:
+        12px;
+
+    background:
+        var(--gradient-purple);
+
+    color:
+        white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+.terms-contact-card div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.terms-contact-card span {
+
+    color:
+        var(--text-muted);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.terms-contact-card a {
+
+    color:
+        var(--purple-300);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    word-break: break-word;
+
+    transition:
+        color var(--transition-fast);
+
+}
+
+
+.terms-contact-card a:hover {
+
+    color:
+        white;
+
+}
+
+
+
+/* =========================================================
+   08. DISCLAIMER
+========================================================= */
+
+.terms-disclaimer {
+
+    margin-top:
+        10px;
+
+    padding:
+        22px;
+
+    border:
+        1px solid
+        rgba(251,191,36,0.18);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        rgba(251,191,36,0.035);
+
+}
+
+
+.terms-disclaimer strong {
+
+    display: block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        #fbbf24;
+
+    font-size:
+        13px;
+
+}
+
+
+.terms-disclaimer p {
+
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+
+}
+
+
+
+/* =========================================================
+   09. ACTIVE FOOTER
+========================================================= */
+
+.footer-active {
+
+    color:
+        var(--purple-400) !important;
+
+}
+
+
+
+/* =========================================================
+   10. RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .terms-layout {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            45px;
+
+    }
+
+
+    .terms-sidebar {
+
+        position:
+            relative;
+
+        top:
+            auto;
+
+    }
+
+
+    .terms-nav {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            0 20px;
+
+    }
+
+
+    .terms-nav > span {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .terms-hero {
+
+        min-height:
+            420px;
+
+        padding:
+            calc(var(--header-height) + 60px)
+            0
+            60px;
+
+    }
+
+
+    .terms-hero h1 {
+
+        font-size:
+            48px;
+
+        letter-spacing:
+            -2px;
+
+    }
+
+
+    .terms-hero-content > p {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .terms-section {
+
+        padding:
+            70px 0 80px;
+
+    }
+
+
+    .terms-nav {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .terms-block {
+
+        padding-bottom:
+            40px;
+
+        margin-bottom:
+            40px;
+
+    }
+
+
+    .terms-block h2 {
+
+        font-size:
+            28px;
+
+    }
+
+
+    .terms-block p {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.8;
+
+    }
+
+
+    .terms-contact-card {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .terms-updated {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            3px;
+
+        border-radius:
+            12px;
+
+    }
+
+}

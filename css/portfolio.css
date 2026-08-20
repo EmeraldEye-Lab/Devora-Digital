@@ -1,0 +1,1970 @@
+/* =========================================================
+   DEVORA DIGITAL
+   PORTFOLIO PAGE
+========================================================= */
+
+
+/* =========================================================
+   01. PORTFOLIO HERO
+========================================================= */
+
+.portfolio-hero {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    padding-top: 78px;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(168, 85, 247, 0.15),
+            transparent 45%
+        ),
+        #05030a;
+
+}
+
+
+.portfolio-bg-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.3;
+
+    background-image:
+
+        linear-gradient(
+            rgba(168, 85, 247, 0.06) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(168, 85, 247, 0.06) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        50px 50px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+
+}
+
+
+.portfolio-glow {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+
+}
+
+
+.portfolio-glow-one {
+
+    top: -250px;
+
+    left: 5%;
+
+    background:
+        rgba(168, 85, 247, 0.14);
+
+}
+
+
+.portfolio-glow-two {
+
+    right: -200px;
+
+    bottom: -300px;
+
+    background:
+        rgba(124, 58, 237, 0.12);
+
+}
+
+
+.portfolio-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.portfolio-hero-content h1 {
+
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(45px, 7vw, 82px);
+
+    line-height: 1;
+
+    letter-spacing:
+        -4px;
+
+}
+
+
+.portfolio-hero-content h1 span {
+
+    display: block;
+
+    color:
+        var(--purple-400);
+
+}
+
+
+.portfolio-hero-content p {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   02. PORTFOLIO SECTION
+========================================================= */
+
+.portfolio-section {
+
+    padding:
+        100px 0 120px;
+
+    background:
+        var(--dark-950);
+
+}
+
+
+/* =========================================================
+   03. FILTERS
+========================================================= */
+
+.portfolio-filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 60px;
+
+}
+
+
+.filter-btn {
+
+    min-height: 44px;
+
+    padding:
+        0 20px;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-full);
+
+    background:
+        rgba(255,255,255,0.035);
+
+    color:
+        var(--text-secondary);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        transform var(--transition),
+        color var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+
+}
+
+
+.filter-btn:hover {
+
+    color: white;
+
+    transform:
+        translateY(-2px);
+
+    background:
+        rgba(168,85,247,0.1);
+
+    border-color:
+        rgba(168,85,247,0.3);
+
+}
+
+
+.filter-btn.active {
+
+    color: white;
+
+    background:
+        var(--gradient-purple);
+
+    border-color:
+        transparent;
+
+    box-shadow:
+        0 10px 30px
+        rgba(168,85,247,0.25);
+
+}
+
+
+/* =========================================================
+   04. PORTFOLIO GRID
+========================================================= */
+
+.portfolio-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 70px 28px;
+
+}
+
+
+/* =========================================================
+   05. PORTFOLIO CARD
+========================================================= */
+
+.portfolio-card {
+
+    position: relative;
+
+    min-width: 0;
+
+}
+
+
+.portfolio-card.is-hidden {
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   06. PORTFOLIO IMAGE
+========================================================= */
+
+.portfolio-image {
+
+    position: relative;
+
+    height: 360px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-xl);
+
+    background:
+        #100a19;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.2);
+
+}
+
+
+.portfolio-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    border-radius:
+        inherit;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(255,255,255,0.03);
+
+}
+
+
+.portfolio-card:hover
+.portfolio-image {
+
+    border-color:
+        rgba(168,85,247,0.35);
+
+    box-shadow:
+        0 30px 80px
+        rgba(168,85,247,0.12);
+
+}
+
+
+/* =========================================================
+   07. BROWSER MOCKUP
+========================================================= */
+
+.browser-mockup {
+
+    position: absolute;
+
+    inset:
+        35px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    border-radius:
+        15px;
+
+    background:
+        #090611;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,0.45);
+
+    transform:
+        perspective(1000px)
+        rotateX(2deg);
+
+    transition:
+        transform 0.6s ease;
+
+}
+
+
+.portfolio-card:hover
+.browser-mockup {
+
+    transform:
+        perspective(1000px)
+        rotateX(0deg)
+        translateY(-5px);
+
+}
+
+
+.browser-top {
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        0 12px;
+
+    background:
+        #15101d;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.06);
+
+}
+
+
+.browser-dots {
+
+    display: flex;
+
+    gap: 5px;
+
+}
+
+
+.browser-dots span {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.25);
+
+}
+
+
+.browser-url {
+
+    flex: 1;
+
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background:
+        rgba(255,255,255,0.04);
+
+    color:
+        #71677e;
+
+    font-size: 8px;
+
+}
+
+
+.browser-screen {
+
+    height: calc(100% - 36px);
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #130b20,
+            #08050d
+        );
+
+}
+
+
+.mock-navbar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+
+}
+
+
+.mock-navbar strong {
+
+    color:
+        var(--purple-400);
+
+    font-size: 11px;
+
+}
+
+
+.mock-nav-lines {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.mock-nav-lines span {
+
+    width: 25px;
+
+    height: 4px;
+
+    border-radius: 5px;
+
+    background:
+        rgba(255,255,255,0.1);
+
+}
+
+
+.mock-hero {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.mock-content {
+
+    width: 55%;
+
+}
+
+
+.mock-title {
+
+    width: 85%;
+
+    height: 25px;
+
+    margin-bottom: 12px;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a855f7,
+            #6d28d9
+        );
+
+}
+
+
+.mock-line {
+
+    width: 90%;
+
+    height: 6px;
+
+    margin-bottom: 7px;
+
+    border-radius: 5px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+}
+
+
+.mock-line.short {
+
+    width: 60%;
+
+}
+
+
+.mock-button {
+
+    width: 65px;
+
+    height: 20px;
+
+    margin-top: 15px;
+
+    border-radius: 5px;
+
+    background:
+        var(--purple-600);
+
+}
+
+
+.mock-product {
+
+    width: 110px;
+
+    height: 130px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168,85,247,0.3),
+            rgba(124,58,237,0.05)
+        );
+
+    border:
+        1px solid
+        rgba(168,85,247,0.25);
+
+}
+
+
+.mock-product div {
+
+    font-size: 35px;
+
+    color:
+        var(--purple-400);
+
+}
+
+
+/* =========================================================
+   08. LANDING PREVIEW
+========================================================= */
+
+.landing-preview {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(168,85,247,0.3),
+            transparent 45%
+        ),
+        #090611;
+
+}
+
+
+.landing-glow {
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(168,85,247,0.15);
+
+    filter:
+        blur(70px);
+
+}
+
+
+.landing-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 70%;
+
+    text-align: center;
+
+}
+
+
+.landing-content small {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    color:
+        var(--purple-400);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.landing-content strong {
+
+    display: block;
+
+    color: white;
+
+    font-size:
+        clamp(25px, 4vw, 45px);
+
+    line-height: 1.05;
+
+}
+
+
+.landing-line {
+
+    width: 100px;
+
+    height: 3px;
+
+    margin: 20px auto;
+
+    border-radius: 10px;
+
+    background:
+        var(--purple-500);
+
+}
+
+
+.landing-btn {
+
+    display: inline-block;
+
+    padding:
+        9px 16px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--gradient-purple);
+
+    color: white;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   09. ECOMMERCE PREVIEW
+========================================================= */
+
+.ecommerce-preview {
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 40px;
+
+    background:
+        #0c0812;
+
+}
+
+
+.shop-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.shop-header strong {
+
+    color:
+        var(--purple-400);
+
+    font-size: 14px;
+
+}
+
+
+.shop-header span {
+
+    font-size: 16px;
+
+}
+
+
+.shop-products {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.shop-product {
+
+    padding: 10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.06);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.03);
+
+}
+
+
+.product-box {
+
+    height: 130px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168,85,247,0.2),
+            rgba(255,255,255,0.03)
+        );
+
+    color:
+        var(--purple-400);
+
+    font-size: 30px;
+
+}
+
+
+.shop-product > span {
+
+    display: block;
+
+    width: 70%;
+
+    height: 6px;
+
+    margin-top: 10px;
+
+    border-radius: 5px;
+
+    background:
+        rgba(255,255,255,0.1);
+
+}
+
+
+/* =========================================================
+   10. BUSINESS PREVIEW
+========================================================= */
+
+.business-preview {
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #120b1d,
+            #08050d
+        );
+
+}
+
+
+.business-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+
+}
+
+
+.business-header strong {
+
+    color:
+        var(--purple-400);
+
+    font-size: 14px;
+
+}
+
+
+.business-header div {
+
+    width: 70px;
+
+    height: 8px;
+
+    border-radius: 5px;
+
+    background:
+        rgba(255,255,255,0.1);
+
+}
+
+
+.business-body {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.business-text {
+
+    flex: 1;
+
+}
+
+
+.business-text span {
+
+    display: block;
+
+    width: 85%;
+
+    height: 10px;
+
+    margin-bottom: 12px;
+
+    border-radius: 5px;
+
+    background:
+        rgba(255,255,255,0.1);
+
+}
+
+
+.business-text span:first-child {
+
+    width: 95%;
+
+    height: 25px;
+
+    background:
+        var(--purple-600);
+
+}
+
+
+.business-image {
+
+    width: 190px;
+
+    height: 160px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 20px;
+
+    background:
+        rgba(168,85,247,0.12);
+
+    border:
+        1px solid
+        rgba(168,85,247,0.2);
+
+}
+
+
+.business-image span {
+
+    color:
+        var(--purple-400);
+
+    font-size: 45px;
+
+}
+
+
+/* =========================================================
+   11. DASHBOARD
+========================================================= */
+
+.dashboard-preview {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    background:
+        #090611;
+
+}
+
+
+.dashboard-sidebar {
+
+    width: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-top: 30px;
+
+    background:
+        #100a18;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,0.06);
+
+}
+
+
+.dashboard-sidebar strong {
+
+    color:
+        var(--purple-400);
+
+    font-size: 20px;
+
+}
+
+
+.dashboard-sidebar span {
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 6px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+}
+
+
+.dashboard-main {
+
+    flex: 1;
+
+    padding: 30px;
+
+}
+
+
+.dashboard-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+}
+
+
+.dashboard-top span {
+
+    width: 120px;
+
+    height: 15px;
+
+    border-radius: 5px;
+
+    background:
+        rgba(255,255,255,0.1);
+
+}
+
+
+.dashboard-top span:last-child {
+
+    width: 60px;
+
+}
+
+
+.dashboard-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.dashboard-stats div {
+
+    height: 70px;
+
+    border:
+        1px solid
+        rgba(168,85,247,0.15);
+
+    border-radius: 10px;
+
+    background:
+        rgba(168,85,247,0.07);
+
+}
+
+
+.dashboard-chart {
+
+    height: 140px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+
+    padding: 20px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.06);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.02);
+
+}
+
+
+.dashboard-chart span {
+
+    width: 8%;
+
+    border-radius:
+        5px 5px 0 0;
+
+    background:
+        var(--purple-600);
+
+}
+
+
+.dashboard-chart span:nth-child(1) {
+    height: 40%;
+}
+
+.dashboard-chart span:nth-child(2) {
+    height: 65%;
+}
+
+.dashboard-chart span:nth-child(3) {
+    height: 50%;
+}
+
+.dashboard-chart span:nth-child(4) {
+    height: 85%;
+}
+
+
+/* =========================================================
+   12. AGENCY PREVIEW
+========================================================= */
+
+.agency-preview {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    background:
+        #07040d;
+
+}
+
+
+.agency-orb {
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(168,85,247,0.35),
+            transparent 65%
+        );
+
+    filter:
+        blur(15px);
+
+}
+
+
+.agency-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+}
+
+
+.agency-content small {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color:
+        var(--purple-400);
+
+    letter-spacing: 4px;
+
+    font-size: 10px;
+
+}
+
+
+.agency-content strong {
+
+    display: block;
+
+    max-width: 500px;
+
+    color: white;
+
+    font-size:
+        clamp(30px, 5vw, 55px);
+
+    line-height: 0.95;
+
+}
+
+
+.agency-content span {
+
+    display: block;
+
+    margin-top: 20px;
+
+    color:
+        var(--text-muted);
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =========================================================
+   13. PROJECT OVERLAY
+========================================================= */
+
+.project-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 0;
+
+    background:
+        rgba(5,3,10,0.65);
+
+    backdrop-filter:
+        blur(4px);
+
+    transition:
+        opacity var(--transition);
+
+}
+
+
+.portfolio-card:hover
+.project-overlay {
+
+    opacity: 1;
+
+}
+
+
+.project-view {
+
+    padding:
+        12px 20px;
+
+    border:
+        1px solid
+        rgba(168,85,247,0.4);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(168,85,247,0.15);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transform:
+        translateY(10px);
+
+    transition:
+        transform var(--transition);
+
+}
+
+
+.portfolio-card:hover
+.project-view {
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   14. PORTFOLIO INFO
+========================================================= */
+
+.portfolio-info {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 22px;
+
+}
+
+
+.portfolio-info-main {
+
+    min-width: 0;
+
+}
+
+
+.portfolio-category {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color:
+        var(--purple-400);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+.portfolio-info h2 {
+
+    margin-bottom: 8px;
+
+    color: white;
+
+    font-size: 24px;
+
+    letter-spacing:
+        -0.8px;
+
+}
+
+
+.portfolio-info p {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.portfolio-arrow {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius: 50%;
+
+    color:
+        var(--purple-400);
+
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition);
+
+}
+
+
+.portfolio-card:hover
+.portfolio-arrow {
+
+    transform:
+        translate(3px,-3px);
+
+    background:
+        rgba(168,85,247,0.1);
+
+    border-color:
+        var(--border-purple);
+
+}
+
+
+/* =========================================================
+   15. TAGS
+========================================================= */
+
+.portfolio-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 15px;
+
+}
+
+
+.portfolio-tags span {
+
+    padding:
+        6px 10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.06);
+
+    border-radius:
+        6px;
+
+    color:
+        var(--text-muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   16. EMPTY STATE
+========================================================= */
+
+.portfolio-empty {
+
+    display: none;
+
+    padding:
+        70px 20px;
+
+    text-align: center;
+
+}
+
+
+.portfolio-empty.show {
+
+    display: block;
+
+}
+
+
+.empty-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin:
+        0 auto 20px;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius: 50%;
+
+    background:
+        rgba(168,85,247,0.08);
+
+    color:
+        var(--purple-400);
+
+    font-size: 22px;
+
+}
+
+
+.portfolio-empty h3 {
+
+    margin-bottom: 8px;
+
+    font-size: 22px;
+
+}
+
+
+.portfolio-empty p {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   17. CTA
+========================================================= */
+
+.portfolio-cta {
+
+    padding:
+        0 0 120px;
+
+    background:
+        var(--dark-950);
+
+}
+
+
+.portfolio-cta-box {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        90px 40px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius:
+        var(--radius-xl);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(168,85,247,0.18),
+            transparent 55%
+        ),
+        #0d0816;
+
+}
+
+
+.cta-decoration {
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    top: -200px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(168,85,247,0.12);
+
+    filter:
+        blur(80px);
+
+}
+
+
+.portfolio-cta-box > *:not(.cta-decoration) {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.portfolio-cta-box h2 {
+
+    max-width: 700px;
+
+    margin:
+        0 auto 20px;
+
+    font-size:
+        clamp(35px,5vw,60px);
+
+    line-height: 1.05;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+.portfolio-cta-box h2 span {
+
+    color:
+        var(--purple-400);
+
+}
+
+
+.portfolio-cta-box p {
+
+    max-width: 550px;
+
+    margin:
+        0 auto 30px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================================
+   18. REVEAL
+========================================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+
+}
+
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   19. RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .portfolio-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .portfolio-image {
+
+        height: 380px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .portfolio-hero {
+
+        min-height: 450px;
+
+    }
+
+
+    .portfolio-hero-content h1 {
+
+        font-size: 44px;
+
+        letter-spacing:
+            -2px;
+
+    }
+
+
+    .portfolio-hero-content p {
+
+        font-size: 14px;
+
+    }
+
+
+    .portfolio-section {
+
+        padding:
+            70px 0 90px;
+
+    }
+
+
+    .portfolio-filters {
+
+        justify-content:
+            flex-start;
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .filter-btn {
+
+        padding:
+            0 15px;
+
+        font-size: 12px;
+
+    }
+
+
+    .portfolio-image {
+
+        height: 280px;
+
+    }
+
+
+    .browser-mockup {
+
+        inset:
+            20px;
+
+    }
+
+
+    .ecommerce-preview,
+    .business-preview {
+
+        padding:
+            25px;
+
+    }
+
+
+    .product-box {
+
+        height: 90px;
+
+    }
+
+
+    .business-image {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+
+    .portfolio-info h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .portfolio-cta-box {
+
+        padding:
+            65px 20px;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .portfolio-filters {
+
+        gap: 7px;
+
+    }
+
+
+    .filter-btn {
+
+        padding:
+            0 12px;
+
+    }
+
+
+    .portfolio-image {
+
+        height: 250px;
+
+    }
+
+
+    .portfolio-tags span {
+
+        font-size: 9px;
+
+    }
+
+}

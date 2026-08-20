@@ -1,0 +1,1037 @@
+/* =========================================================
+   DEVORA DIGITAL
+   COOKIE POLICY
+========================================================= */
+
+
+/* =========================================================
+   01. HERO
+========================================================= */
+
+.cookie-hero {
+
+    position: relative;
+
+    min-height: 480px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        calc(var(--header-height) + 80px)
+        0
+        80px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(168, 85, 247, 0.16),
+            transparent 35%
+        ),
+        var(--dark-950);
+
+}
+
+
+.cookie-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        60px 60px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+
+    pointer-events: none;
+
+}
+
+
+.cookie-hero-glow {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    top: -200px;
+
+    right: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(168,85,247,0.12);
+
+    filter:
+        blur(80px);
+
+    pointer-events: none;
+
+}
+
+
+.cookie-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+}
+
+
+.cookie-hero h1 {
+
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(48px, 7vw, 82px);
+
+    line-height: 1;
+
+    letter-spacing:
+        -3px;
+
+}
+
+
+.cookie-hero h1 span {
+
+    color:
+        var(--purple-400);
+
+}
+
+
+.cookie-hero-content > p {
+
+    max-width: 650px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+.cookie-updated {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    padding:
+        10px 16px;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-full);
+
+    background:
+        rgba(255,255,255,0.035);
+
+}
+
+
+.cookie-updated span {
+
+    color:
+        var(--text-muted);
+
+    font-size: 12px;
+
+}
+
+
+.cookie-updated strong {
+
+    color:
+        var(--purple-300);
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================================================
+   02. MAIN SECTION
+========================================================= */
+
+.cookie-section {
+
+    padding:
+        100px 0 120px;
+
+    background:
+        var(--dark-950);
+
+}
+
+
+.cookie-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        240px 1fr;
+
+    gap:
+        80px;
+
+    align-items:
+        start;
+
+}
+
+
+
+/* =========================================================
+   03. SIDEBAR
+========================================================= */
+
+.cookie-sidebar {
+
+    position:
+        sticky;
+
+    top:
+        calc(var(--header-height) + 30px);
+
+}
+
+
+.cookie-nav {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        rgba(255,255,255,0.025);
+
+}
+
+
+.cookie-nav > span {
+
+    margin-bottom:
+        14px;
+
+    color:
+        var(--purple-400);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.8px;
+
+}
+
+
+.cookie-nav a {
+
+    padding:
+        8px 0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        12px;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+
+}
+
+
+.cookie-nav a:hover {
+
+    color:
+        white;
+
+    transform:
+        translateX(3px);
+
+}
+
+
+
+/* =========================================================
+   04. CONTENT
+========================================================= */
+
+.cookie-content {
+
+    max-width:
+        780px;
+
+}
+
+
+.cookie-block {
+
+    padding:
+        0 0 55px;
+
+    margin-bottom:
+        55px;
+
+    border-bottom:
+        1px solid
+        var(--border-dark);
+
+}
+
+
+.cookie-number {
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--purple-400);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+.cookie-block h2 {
+
+    margin-bottom:
+        20px;
+
+    color:
+        white;
+
+    font-size:
+        clamp(26px, 4vw, 36px);
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -1px;
+
+}
+
+
+.cookie-block p {
+
+    margin-bottom:
+        18px;
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.9;
+
+}
+
+
+.cookie-block p:last-child {
+
+    margin-bottom:
+        0;
+
+}
+
+
+
+/* =========================================================
+   05. COOKIE TYPES
+========================================================= */
+
+.cookie-types {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        15px;
+
+    margin-top:
+        28px;
+
+}
+
+
+.cookie-type-card {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        16px;
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        rgba(255,255,255,0.025);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+
+}
+
+
+.cookie-type-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        var(--border-purple);
+
+    background:
+        rgba(168,85,247,0.045);
+
+}
+
+
+.cookie-type-icon {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        11px;
+
+    background:
+        var(--gradient-purple);
+
+    color:
+        white;
+
+    font-size:
+        16px;
+
+    font-weight:
+        700;
+
+    box-shadow:
+        0 8px 25px
+        rgba(168,85,247,0.18);
+
+}
+
+
+.cookie-type-card h3 {
+
+    margin-bottom:
+        5px;
+
+    color:
+        white;
+
+    font-size:
+        15px;
+
+}
+
+
+.cookie-type-card p {
+
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+
+}
+
+
+
+/* =========================================================
+   06. LIST
+========================================================= */
+
+.cookie-block ul {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+
+    margin:
+        20px 0 22px;
+
+    padding-left:
+        20px;
+
+}
+
+
+.cookie-block li {
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+
+}
+
+
+.cookie-block li::marker {
+
+    color:
+        var(--purple-400);
+
+}
+
+
+
+/* =========================================================
+   07. NOTE
+========================================================= */
+
+.cookie-note {
+
+    margin-top:
+        25px;
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168,85,247,0.09),
+            rgba(168,85,247,0.025)
+        );
+
+}
+
+
+.cookie-note strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+
+    color:
+        var(--purple-300);
+
+    font-size:
+        13px;
+
+}
+
+
+.cookie-note p {
+
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+
+}
+
+
+
+/* =========================================================
+   08. CONTACT
+========================================================= */
+
+.cookie-contact-block {
+
+    padding-bottom:
+        35px;
+
+}
+
+
+.cookie-contact-card {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    margin-top:
+        28px;
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168,85,247,0.10),
+            rgba(168,85,247,0.025)
+        );
+
+}
+
+
+.contact-icon {
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        12px;
+
+    background:
+        var(--gradient-purple);
+
+    color:
+        white;
+
+    font-size:
+        18px;
+
+    font-weight:
+        700;
+
+}
+
+
+.cookie-contact-card div:last-child {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        3px;
+
+}
+
+
+.cookie-contact-card span {
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        11px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.cookie-contact-card a {
+
+    color:
+        var(--purple-300);
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    word-break:
+        break-word;
+
+    transition:
+        color var(--transition-fast);
+
+}
+
+
+.cookie-contact-card a:hover {
+
+    color:
+        white;
+
+}
+
+
+
+/* =========================================================
+   09. DISCLAIMER
+========================================================= */
+
+.cookie-disclaimer {
+
+    margin-top:
+        10px;
+
+    padding:
+        22px;
+
+    border:
+        1px solid
+        rgba(251,191,36,0.18);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        rgba(251,191,36,0.035);
+
+}
+
+
+.cookie-disclaimer strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        #fbbf24;
+
+    font-size:
+        13px;
+
+}
+
+
+.cookie-disclaimer p {
+
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+
+}
+
+
+
+/* =========================================================
+   10. ACTIVE FOOTER
+========================================================= */
+
+.footer-active {
+
+    color:
+        var(--purple-400) !important;
+
+}
+
+
+
+/* =========================================================
+   11. RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .cookie-layout {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            45px;
+
+    }
+
+
+    .cookie-sidebar {
+
+        position:
+            relative;
+
+        top:
+            auto;
+
+    }
+
+
+    .cookie-nav {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            0 20px;
+
+    }
+
+
+    .cookie-nav > span {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .cookie-hero {
+
+        min-height:
+            420px;
+
+        padding:
+            calc(var(--header-height) + 60px)
+            0
+            60px;
+
+    }
+
+
+    .cookie-hero h1 {
+
+        font-size:
+            48px;
+
+        letter-spacing:
+            -2px;
+
+    }
+
+
+    .cookie-hero-content > p {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .cookie-section {
+
+        padding:
+            70px 0 80px;
+
+    }
+
+
+    .cookie-nav {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .cookie-block {
+
+        padding-bottom:
+            40px;
+
+        margin-bottom:
+            40px;
+
+    }
+
+
+    .cookie-block h2 {
+
+        font-size:
+            28px;
+
+    }
+
+
+    .cookie-block p {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.8;
+
+    }
+
+
+    .cookie-type-card {
+
+        padding:
+            16px;
+
+    }
+
+
+    .cookie-contact-card {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .cookie-updated {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            3px;
+
+        border-radius:
+            12px;
+
+    }
+
+}

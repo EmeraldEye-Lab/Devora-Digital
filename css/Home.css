@@ -1,0 +1,2414 @@
+/* =========================================================
+   DEVORA DIGITAL
+   HOME PAGE STYLE
+========================================================= */
+
+
+/* =========================================================
+   01. HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        150px 0 100px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(168, 85, 247, 0.12),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(124, 58, 237, 0.08),
+            transparent 30%
+        ),
+        var(--dark-950);
+
+}
+
+
+/* =========================================================
+   02. HERO GRID
+========================================================= */
+
+.hero-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.3;
+
+    background-image:
+        linear-gradient(
+            rgba(168, 85, 247, 0.06) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(168, 85, 247, 0.06) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        60px 60px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 85%
+        );
+
+}
+
+
+/* =========================================================
+   03. HERO GLOW
+========================================================= */
+
+.hero-glow {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter:
+        blur(80px);
+
+}
+
+
+.hero-glow-one {
+
+    top: -220px;
+
+    left: -150px;
+
+    background:
+        rgba(168, 85, 247, 0.15);
+
+    animation:
+        heroGlowOne 8s ease-in-out infinite;
+
+}
+
+
+.hero-glow-two {
+
+    right: -180px;
+
+    bottom: -220px;
+
+    background:
+        rgba(124, 58, 237, 0.12);
+
+    animation:
+        heroGlowTwo 10s ease-in-out infinite;
+
+}
+
+
+@keyframes heroGlowOne {
+
+    0%,
+    100% {
+
+        transform:
+            translate(0, 0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate(50px, 30px)
+            scale(1.1);
+
+    }
+
+}
+
+
+@keyframes heroGlowTwo {
+
+    0%,
+    100% {
+
+        transform:
+            translate(0, 0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate(-40px, -30px)
+            scale(1.15);
+
+    }
+
+}
+
+
+/* =========================================================
+   04. HERO CONTAINER
+========================================================= */
+
+.hero-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 0.95fr);
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+/* =========================================================
+   05. HERO CONTENT
+========================================================= */
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 25px;
+
+    padding:
+        8px 13px;
+
+    border:
+        1px solid
+        rgba(168, 85, 247, 0.2);
+
+    border-radius:
+        var(--radius-full);
+
+    background:
+        rgba(168, 85, 247, 0.07);
+
+    color:
+        var(--purple-300);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing:
+        0.2px;
+
+    animation:
+        fadeUp 0.8s
+        0.1s
+        both;
+
+}
+
+
+.badge-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        var(--purple-400);
+
+    box-shadow:
+        0 0 12px
+        rgba(192, 132, 252, 0.8);
+
+    animation:
+        pulseDot 2s ease-in-out infinite;
+
+}
+
+
+@keyframes pulseDot {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.5);
+
+        opacity: 0.6;
+
+    }
+
+}
+
+
+/* =========================================================
+   06. HERO HEADING
+========================================================= */
+
+.hero h1 {
+
+    max-width: 700px;
+
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            76px
+        );
+
+    line-height:
+        0.98;
+
+    letter-spacing:
+        -4px;
+
+    font-weight:
+        800;
+
+    animation:
+        fadeUp 0.8s
+        0.2s
+        both;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c084fc,
+            #a855f7,
+            #7c3aed
+        );
+
+    background-size:
+        200% auto;
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    animation:
+        gradientText 5s
+        ease
+        infinite;
+
+}
+
+
+@keyframes gradientText {
+
+    0% {
+
+        background-position:
+            0% center;
+
+    }
+
+    50% {
+
+        background-position:
+            100% center;
+
+    }
+
+    100% {
+
+        background-position:
+            0% center;
+
+    }
+
+}
+
+
+/* =========================================================
+   07. HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+
+    max-width: 570px;
+
+    margin-bottom: 32px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    animation:
+        fadeUp 0.8s
+        0.3s
+        both;
+
+}
+
+
+/* =========================================================
+   08. HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    animation:
+        fadeUp 0.8s
+        0.4s
+        both;
+
+}
+
+
+/* =========================================================
+   09. HERO TRUST
+========================================================= */
+
+.hero-trust {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+    animation:
+        fadeUp 0.8s
+        0.5s
+        both;
+
+}
+
+
+.trust-avatars {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.trust-avatars span {
+
+    width: 28px;
+
+    height: 28px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-left: -6px;
+
+    border:
+        2px solid
+        var(--dark-950);
+
+    border-radius: 50%;
+
+    background:
+        var(--gradient-purple);
+
+    color:
+        white;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.trust-avatars span:first-child {
+
+    margin-left: 0;
+
+}
+
+
+.hero-trust strong {
+
+    display: block;
+
+    color:
+        white;
+
+    font-size: 12px;
+
+}
+
+
+.hero-trust small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color:
+        var(--text-muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   10. HERO VISUAL
+========================================================= */
+
+.hero-visual {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation:
+        heroVisualIn 1s
+        0.3s
+        both;
+
+}
+
+
+@keyframes heroVisualIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(40px)
+            scale(0.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   11. BROWSER WINDOW
+========================================================= */
+
+.browser-window {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 590px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(192, 132, 252, 0.2);
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(20, 13, 31, 0.9);
+
+    box-shadow:
+        0 40px 100px
+        rgba(0, 0, 0, 0.45),
+        0 0 80px
+        rgba(168, 85, 247, 0.12);
+
+    transform:
+        perspective(1000px)
+        rotateY(-5deg)
+        rotateX(2deg);
+
+    transition:
+        transform 0.6s ease;
+
+}
+
+
+.hero-visual:hover
+.browser-window {
+
+    transform:
+        perspective(1000px)
+        rotateY(0)
+        rotateX(0)
+        translateY(-5px);
+
+}
+
+
+/* =========================================================
+   12. BROWSER HEADER
+========================================================= */
+
+.browser-header {
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        0 14px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+}
+
+
+.browser-dots {
+
+    display: flex;
+
+    gap: 5px;
+
+}
+
+
+.browser-dots span {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.25);
+
+}
+
+
+.browser-address {
+
+    flex: 1;
+
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius:
+        5px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color:
+        var(--text-muted);
+
+    font-size: 9px;
+
+}
+
+
+/* =========================================================
+   13. BROWSER CONTENT
+========================================================= */
+
+.browser-content {
+
+    padding:
+        22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168, 85, 247, 0.04),
+            rgba(255, 255, 255, 0.01)
+        );
+
+}
+
+
+/* =========================================================
+   14. PREVIEW NAVBAR
+========================================================= */
+
+.preview-navbar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+
+}
+
+
+.preview-logo {
+
+    width: 25px;
+
+    height: 25px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius:
+        7px;
+
+    background:
+        var(--gradient-purple);
+
+    color:
+        white;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.preview-links {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.preview-links span {
+
+    width: 32px;
+
+    height: 4px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+}
+
+
+/* =========================================================
+   15. PREVIEW HERO
+========================================================= */
+
+.preview-hero {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        0.75fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.preview-text {
+
+    padding-left: 10px;
+
+}
+
+
+.preview-line {
+
+    height: 9px;
+
+    margin-bottom: 9px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+}
+
+
+.preview-line.large {
+
+    width: 95%;
+
+    height: 17px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(192, 132, 252, 0.8),
+            rgba(168, 85, 247, 0.25)
+        );
+
+}
+
+
+.preview-line.medium {
+
+    width: 75%;
+
+}
+
+
+.preview-line.small {
+
+    width: 55%;
+
+}
+
+
+.preview-buttons {
+
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: 20px;
+
+}
+
+
+.preview-buttons span {
+
+    width: 55px;
+
+    height: 17px;
+
+    border-radius:
+        5px;
+
+    background:
+        rgba(168, 85, 247, 0.65);
+
+}
+
+
+.preview-buttons span:last-child {
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+}
+
+
+/* =========================================================
+   16. PREVIEW CARD
+========================================================= */
+
+.preview-card {
+
+    padding:
+        22px;
+
+    min-height: 145px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(168, 85, 247, 0.15);
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(168, 85, 247, 0.13),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.05);
+
+}
+
+
+.preview-card-icon {
+
+    width: 35px;
+
+    height: 35px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 15px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(168, 85, 247, 0.18);
+
+    color:
+        var(--purple-300);
+
+}
+
+
+.preview-card-line {
+
+    width: 75%;
+
+    height: 7px;
+
+    margin-bottom: 7px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(255, 255, 255, 0.13);
+
+}
+
+
+.preview-card-line.short {
+
+    width: 50%;
+
+}
+
+
+/* =========================================================
+   17. PREVIEW STATS
+========================================================= */
+
+.preview-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+
+.preview-stats div {
+
+    height: 42px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+
+    border-radius:
+        8px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+}
+
+
+/* =========================================================
+   18. FLOATING CARDS
+========================================================= */
+
+.floating-card {
+
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        12px 15px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(18, 11, 28, 0.9);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.3);
+
+    backdrop-filter:
+        blur(10px);
+
+    animation:
+        floatCard 5s ease-in-out infinite;
+
+}
+
+
+.floating-card strong {
+
+    display: block;
+
+    color:
+        white;
+
+    font-size: 11px;
+
+}
+
+
+.floating-card small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color:
+        var(--text-muted);
+
+    font-size: 8px;
+
+}
+
+
+.floating-icon,
+.floating-check {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(168, 85, 247, 0.15);
+
+    color:
+        var(--purple-300);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.floating-card-one {
+
+    top: 18%;
+
+    right: -25px;
+
+}
+
+
+.floating-card-two {
+
+    bottom: 13%;
+
+    left: -35px;
+
+    animation-delay:
+        -2s;
+
+}
+
+
+@keyframes floatCard {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+
+    }
+
+}
+
+
+/* =========================================================
+   19. INTRO SECTION
+========================================================= */
+
+.intro-section {
+
+    padding:
+        130px 0;
+
+    background:
+        var(--dark-900);
+
+}
+
+
+.intro-section
+.section-heading {
+
+    text-align: center;
+
+    margin-inline: auto;
+
+}
+
+
+.intro-section
+.section-heading p {
+
+    margin-inline: auto;
+
+}
+
+
+/* =========================================================
+   20. VALUE GRID
+========================================================= */
+
+.value-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.value-card {
+
+    position: relative;
+
+    padding:
+        35px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+
+}
+
+
+.value-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background:
+        var(--gradient-purple);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left;
+
+    transition:
+        transform var(--transition);
+
+}
+
+
+.value-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--border-purple);
+
+    background:
+        rgba(168, 85, 247, 0.04);
+
+}
+
+
+.value-card:hover::before {
+
+    transform:
+        scaleX(1);
+
+}
+
+
+.value-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 22px;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(168, 85, 247, 0.08);
+
+    color:
+        var(--purple-300);
+
+    font-size: 20px;
+
+}
+
+
+.value-card h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+}
+
+
+.value-card p {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   21. SERVICES PREVIEW
+========================================================= */
+
+.services-preview {
+
+    padding:
+        130px 0;
+
+    background:
+        var(--dark-950);
+
+}
+
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.service-card {
+
+    position: relative;
+
+    min-height: 330px;
+
+    padding:
+        35px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.012)
+        );
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+
+}
+
+
+.service-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        var(--border-purple);
+
+    box-shadow:
+        var(--shadow-purple);
+
+}
+
+
+.service-number {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+
+    color:
+        rgba(255, 255, 255, 0.15);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.service-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 35px;
+
+    border-radius:
+        14px;
+
+    background:
+        var(--gradient-purple);
+
+    color:
+        white;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(168, 85, 247, 0.2);
+
+}
+
+
+.service-card h3 {
+
+    margin-bottom: 12px;
+
+    font-size: 21px;
+
+}
+
+
+.service-card p {
+
+    margin-bottom: 25px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+.service-card > a {
+
+    color:
+        var(--purple-400);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   22. PROCESS SECTION
+========================================================= */
+
+.process-section {
+
+    padding:
+        130px 0;
+
+    background:
+        var(--dark-900);
+
+}
+
+
+.process-section
+.section-heading {
+
+    margin-inline: auto;
+
+    text-align: center;
+
+}
+
+
+.process-section
+.section-heading p {
+
+    margin-inline: auto;
+
+}
+
+
+.process-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr
+        auto
+        1fr
+        auto
+        1fr;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.process-item {
+
+    padding:
+        25px 5px;
+
+}
+
+
+.process-number {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 18px;
+
+    border:
+        1px solid
+        var(--border-purple);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(168, 85, 247, 0.08);
+
+    color:
+        var(--purple-400);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.process-item h3 {
+
+    margin-bottom: 8px;
+
+    font-size: 17px;
+
+}
+
+
+.process-item p {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+.process-line {
+
+    width: 35px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(168, 85, 247, 0.4),
+            rgba(168, 85, 247, 0.05)
+        );
+
+}
+
+
+/* =========================================================
+   23. PORTFOLIO
+========================================================= */
+
+.portfolio-preview {
+
+    padding:
+        130px 0;
+
+    background:
+        var(--dark-950);
+
+}
+
+
+.portfolio-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.portfolio-card {
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition);
+
+}
+
+
+.portfolio-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--border-purple);
+
+}
+
+
+.portfolio-image {
+
+    min-height: 330px;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 35px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(168, 85, 247, 0.15),
+            transparent 55%
+        ),
+        #0f0a19;
+
+}
+
+
+.portfolio-placeholder {
+
+    width: 85%;
+
+    height: 80%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(168, 85, 247, 0.2);
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(168, 85, 247, 0.1),
+            rgba(255, 255, 255, 0.02)
+        );
+
+}
+
+
+.portfolio-placeholder span {
+
+    color:
+        var(--purple-300);
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    letter-spacing:
+        -1px;
+
+}
+
+
+.portfolio-placeholder small {
+
+    margin-top: 8px;
+
+    color:
+        var(--text-muted);
+
+    font-size: 10px;
+
+}
+
+
+.portfolio-info {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        22px 25px;
+
+}
+
+
+.portfolio-category {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        var(--purple-400);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.portfolio-info h3 {
+
+    font-size: 18px;
+
+}
+
+
+.portfolio-arrow {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        var(--border-dark);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--purple-400);
+
+    transition:
+        transform var(--transition),
+        background var(--transition);
+
+}
+
+
+.portfolio-card:hover
+.portfolio-arrow {
+
+    transform:
+        rotate(45deg);
+
+    background:
+        rgba(168, 85, 247, 0.1);
+
+}
+
+
+/* =========================================================
+   24. CTA SECTION
+========================================================= */
+
+.cta-section {
+
+    padding:
+        40px 0 130px;
+
+    background:
+        var(--dark-950);
+
+}
+
+
+.cta-box {
+
+    position: relative;
+
+    min-height: 400px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding:
+        70px 30px;
+
+    border:
+        1px solid
+        rgba(168, 85, 247, 0.2);
+
+    border-radius:
+        var(--radius-xl);
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(168, 85, 247, 0.18),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(168, 85, 247, 0.08),
+            rgba(255, 255, 255, 0.02)
+        );
+
+}
+
+
+.cta-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.035);
+
+    border-radius:
+        calc(var(--radius-xl) - 8px);
+
+    pointer-events: none;
+
+}
+
+
+.cta-glow {
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    top: -220px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(168, 85, 247, 0.2);
+
+    filter:
+        blur(80px);
+
+    pointer-events: none;
+
+}
+
+
+.cta-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+
+}
+
+
+.cta-content h2 {
+
+    margin-bottom: 18px;
+
+    font-size:
+        clamp(36px, 5vw, 58px);
+
+    line-height: 1.05;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+.cta-content h2 span {
+
+    color:
+        var(--purple-400);
+
+}
+
+
+.cta-content p {
+
+    max-width: 550px;
+
+    margin:
+        0 auto 28px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+.cta-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =========================================================
+   25. GENERAL HOME ANIMATION
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   26. TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 60px;
+
+    }
+
+
+    .hero-content {
+
+        max-width: 750px;
+
+        text-align: center;
+
+        margin-inline: auto;
+
+    }
+
+
+    .hero-description {
+
+        margin-inline: auto;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+
+    .hero-trust {
+
+        justify-content: center;
+
+    }
+
+
+    .hero-visual {
+
+        min-height: 450px;
+
+        max-width: 700px;
+
+        width: 100%;
+
+        margin-inline: auto;
+
+    }
+
+
+    .value-grid,
+    .services-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .value-card:last-child {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .process-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 30px;
+
+    }
+
+
+    .process-line {
+
+        display: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   27. MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+
+        min-height: auto;
+
+        padding:
+            125px 0 80px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(42px, 12vw, 60px);
+
+        letter-spacing:
+            -2.5px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 15px;
+
+    }
+
+
+    .hero-visual {
+
+        min-height: 350px;
+
+    }
+
+
+    .browser-window {
+
+        transform:
+            none;
+
+    }
+
+
+    .hero-visual:hover
+    .browser-window {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+
+    .floating-card {
+
+        transform:
+            scale(0.8);
+
+    }
+
+
+    .floating-card-one {
+
+        right: -20px;
+
+        top: 10%;
+
+    }
+
+
+    .floating-card-two {
+
+        left: -25px;
+
+        bottom: 8%;
+
+    }
+
+
+    .browser-content {
+
+        padding: 14px;
+
+    }
+
+
+    .preview-navbar {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .preview-hero {
+
+        gap: 12px;
+
+    }
+
+
+    .preview-card {
+
+        min-height: 100px;
+
+        padding: 14px;
+
+    }
+
+
+    .preview-card-icon {
+
+        width: 28px;
+
+        height: 28px;
+
+        margin-bottom: 9px;
+
+    }
+
+
+    .preview-stats {
+
+        margin-top: 15px;
+
+    }
+
+
+    .value-grid,
+    .services-grid,
+    .portfolio-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .value-card:last-child {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .value-card,
+    .service-card {
+
+        min-height: auto;
+
+    }
+
+
+    .process-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .process-item {
+
+        padding:
+            15px 0;
+
+    }
+
+
+    .portfolio-image {
+
+        min-height: 260px;
+
+    }
+
+
+    .portfolio-placeholder {
+
+        width: 90%;
+
+        height: 85%;
+
+    }
+
+
+    .cta-box {
+
+        min-height: 430px;
+
+        padding:
+            50px 20px;
+
+    }
+
+
+    .cta-content h2 {
+
+        font-size: 38px;
+
+    }
+
+}
+
+
+/* =========================================================
+   28. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+    }
+
+
+    .hero-trust {
+
+        text-align: left;
+
+        justify-content: flex-start;
+
+    }
+
+
+    .browser-header {
+
+        height: 36px;
+
+    }
+
+
+    .browser-content {
+
+        padding: 11px;
+
+    }
+
+
+    .preview-links span {
+
+        width: 20px;
+
+    }
+
+
+    .floating-card {
+
+        display: none;
+
+    }
+
+
+    .portfolio-image {
+
+        min-height: 220px;
+
+        padding: 20px;
+
+    }
+
+}
